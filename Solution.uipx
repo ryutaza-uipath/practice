@@ -1,0 +1,10 @@
+{
+  "SolutionId": "6f2041da-6423-47f9-8a24-35a0357c13f3",
+  "Projects": [
+    {
+      "Id": "1986c9e2-b168-4bb5-b467-ea6adf8900c8",
+      "Type": "ProcessOrchestration",
+      "ProjectRelativePath": "Agentic Process/project.uiproj"
+    }
+  ]
+}
