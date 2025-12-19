@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:uipath="http://uipath.org/schema/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="x-uipath-initial-diagram" targetNamespace="http://www.omg.org/spec/BPMN/20100524/MODEL" exporter="UiPath Studio Web (https://uipath.com)" exporterVersion="645a89f2">
+  <bpmn:process id="Process_1" name="Process" isExecutable="false">
+    <bpmn:extensionElements>
+      <uipath:migrationVersion version="7" />
+    </bpmn:extensionElements>
+    <bpmn:startEvent id="Event_start" name="Start event">
+      <bpmn:extensionElements>
+        <uipath:entryPointId value="b1aa07c3-ee0e-4e28-9ea3-dcf8d3f72bd6" />
+      </bpmn:extensionElements>
+      <bpmn:outgoing>edge_oB6BKu</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:task id="Activity_WVhidO">
+      <bpmn:incoming>edge_oB6BKu</bpmn:incoming>
+      <bpmn:outgoing>edge_FrJn7m</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:intermediateThrowEvent id="Event_VoPSWD">
+      <bpmn:incoming>edge_AM9j2v</bpmn:incoming>
+    </bpmn:intermediateThrowEvent>
+    <bpmn:task id="Activity_z1fd5i">
+      <bpmn:incoming>edge_FrJn7m</bpmn:incoming>
+      <bpmn:outgoing>edge_AM9j2v</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="edge_oB6BKu" sourceRef="Event_start" targetRef="Activity_WVhidO" />
+    <bpmn:sequenceFlow id="edge_FrJn7m" sourceRef="Activity_WVhidO" targetRef="Activity_z1fd5i" />
+    <bpmn:sequenceFlow id="edge_AM9j2v" sourceRef="Activity_z1fd5i" targetRef="Event_VoPSWD" />
+    <bpmn:association id="edge_Activity_z1fd5i-Text_m2uw4O" sourceRef="Activity_z1fd5i" targetRef="Text_m2uw4O" />
+    <bpmn:textAnnotation id="Text_m2uw4O">
+      <bpmn:text>test</bpmn:text>
+    </bpmn:textAnnotation>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_1">
+      <bpmndi:BPMNShape id="S_Event_start" bpmnElement="Event_start">
+        <dc:Bounds x="260" y="200" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="260" y="241" width="36" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_Activity_WVhidO" bpmnElement="Activity_WVhidO">
+        <dc:Bounds x="349.76171875" y="178" width="100" height="80" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="349.76171875" y="263" width="100" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_Event_VoPSWD" bpmnElement="Event_VoPSWD">
+        <dc:Bounds x="774.76171875" y="198" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="774.76171875" y="239" width="36" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_Activity_z1fd5i" bpmnElement="Activity_z1fd5i">
+        <dc:Bounds x="551.76171875" y="178" width="100" height="80" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="551.76171875" y="263" width="100" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_Text_m2uw4O" bpmnElement="Text_m2uw4O">
+        <dc:Bounds x="701.76171875" y="78" width="100" height="80" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="701.76171875" y="163" width="100" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="BPMNEdge_edge_oB6BKu" bpmnElement="edge_oB6BKu">
+        <di:waypoint x="296" y="218" />
+        <di:waypoint x="350" y="218" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_edge_FrJn7m" bpmnElement="edge_FrJn7m">
+        <di:waypoint x="450" y="218" />
+        <di:waypoint x="552" y="218" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_edge_AM9j2v" bpmnElement="edge_AM9j2v">
+        <di:waypoint x="652" y="218" />
+        <di:waypoint x="713" y="218" />
+        <di:waypoint x="713" y="216" />
+        <di:waypoint x="775" y="216" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_edge_Activity_z1fd5i-Text_m2uw4O" bpmnElement="edge_Activity_z1fd5i-Text_m2uw4O">
+        <di:waypoint x="641.76171875" y="178" />
+        <di:waypoint x="708.9045758928571" y="158" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
