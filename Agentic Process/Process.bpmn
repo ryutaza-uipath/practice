@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:uipath="http://uipath.org/schema/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" id="x-uipath-initial-diagram" targetNamespace="http://www.omg.org/spec/BPMN/20100524/MODEL" exporter="UiPath Studio Web (https://uipath.com)" exporterVersion="645a89f2">
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:uipath="http://uipath.org/schema/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="x-uipath-initial-diagram" targetNamespace="http://www.omg.org/spec/BPMN/20100524/MODEL" exporter="UiPath Studio Web (https://uipath.com)" exporterVersion="645a89f2">
   <bpmn:process id="Process_1" name="Process" isExecutable="false">
     <bpmn:extensionElements>
       <uipath:migrationVersion version="7" />
@@ -8,7 +8,22 @@
       <bpmn:extensionElements>
         <uipath:entryPointId value="e09c0a61-4acc-4136-ad65-5c0997fa6032" />
       </bpmn:extensionElements>
+      <bpmn:outgoing>edge_yT06rV</bpmn:outgoing>
     </bpmn:startEvent>
+    <bpmn:task id="Activity_uEBFRj">
+      <bpmn:incoming>edge_yT06rV</bpmn:incoming>
+      <bpmn:outgoing>edge_ncXREo</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Activity_BN937l">
+      <bpmn:incoming>edge_ncXREo</bpmn:incoming>
+      <bpmn:outgoing>edge_Activity_uEBFRj-Event_LEwLJC</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:intermediateThrowEvent id="Event_LEwLJC">
+      <bpmn:incoming>edge_Activity_uEBFRj-Event_LEwLJC</bpmn:incoming>
+    </bpmn:intermediateThrowEvent>
+    <bpmn:sequenceFlow id="edge_yT06rV" sourceRef="Event_start" targetRef="Activity_uEBFRj" />
+    <bpmn:sequenceFlow id="edge_ncXREo" sourceRef="Activity_uEBFRj" targetRef="Activity_BN937l" />
+    <bpmn:sequenceFlow id="edge_Activity_uEBFRj-Event_LEwLJC" sourceRef="Activity_BN937l" targetRef="Event_LEwLJC" />
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_1">
@@ -18,6 +33,38 @@
           <dc:Bounds x="260" y="241" width="36" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_Activity_uEBFRj" bpmnElement="Activity_uEBFRj">
+        <dc:Bounds x="339" y="178" width="100" height="80" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="339" y="263" width="100" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_Activity_BN937l" bpmnElement="Activity_BN937l">
+        <dc:Bounds x="503" y="178" width="100" height="80" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="503" y="263" width="100" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_Event_LEwLJC" bpmnElement="Event_LEwLJC">
+        <dc:Bounds x="690" y="202" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="690" y="243" width="36" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="BPMNEdge_edge_yT06rV" bpmnElement="edge_yT06rV">
+        <di:waypoint x="296" y="218" />
+        <di:waypoint x="339" y="218" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_edge_ncXREo" bpmnElement="edge_ncXREo">
+        <di:waypoint x="439" y="218" />
+        <di:waypoint x="503" y="218" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_edge_Activity_uEBFRj-Event_LEwLJC" bpmnElement="edge_Activity_uEBFRj-Event_LEwLJC">
+        <di:waypoint x="603" y="218" />
+        <di:waypoint x="647" y="218" />
+        <di:waypoint x="647" y="220" />
+        <di:waypoint x="690" y="220" />
+      </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
 </bpmn:definitions>
